@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Using FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>ToDo-JustDoIt</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Todo list body -->
+        <div class="todo-container">
+            <header class="todo-heading">ToDo List</header>
+            <div class="inputbox">
+                <i class="icon fa-solid fa-list"></i>
+                <input type="text" placeholder="Type your todo list">
+                <i id="add" class="icon fa-solid fa-plus"></i>
+            </div>
+            <div class="buttonholder">
+                <!-- For Marking all task as done. -->
+                <span class=" btn markall"><i class="fa-solid fa-check-double"></i>Complete All Tasks</span>
+                <span class=" btn delcomptask">Clear Completed</span>
+            </div>
+            <hr>
+            <ul class="itemlist"></ul><!-- Dynamic addition of todo list item -->
+            <hr>
+            <div class="buttonholder">
+                <span>
+                    <span class="taskleft"></span><!--Task Count -->
+                    tasks left</span>
+                <div>
+                    <span class="taskleft" >All</span>
+                    <span class=" btn uncomplete">Uncomplete</span>
+                    <span class=" btn clearall">Clear All</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

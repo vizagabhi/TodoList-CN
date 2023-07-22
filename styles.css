@@ -1,0 +1,167 @@
+/* For entire element */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.container {
+    background: #d4d7dc;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    width: 100%;
+    margin: 200px auto;
+    padding: 40px;
+    
+}
+
+.todo-container {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 7px 5px #b5b0b0;
+    box-shadow: 0px;
+}
+
+/* TodoList Heading */
+.todo-heading {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+/* Input-Box */
+.inputbox {
+    background: #eeefef;
+    height: 45px;
+    border-radius: 5px;
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.inputbox input {
+    border: none;
+    background: transparent;
+    width: 100%;
+}
+
+.inputbox input:focus {
+    outline: none;
+}
+
+.inputbox:hover {
+    background-color: rgb(202, 200, 200);
+}
+
+/* Styling Icon */
+.icon {
+    font-size: 1.25rem;
+    padding: 8px;
+}
+
+/*Plus button */
+#add {
+    display: none;
+}
+
+.buttonholder {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(188, 186, 186);
+}
+
+/* Styling Horizontal line */
+hr {
+    border: none;
+    border-top: 1px dotted rgb(191, 186, 186);
+}
+
+/* Styling todo-list when task added dynamically */
+.itemlist li {
+    margin: 7px;
+    padding-left: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    background-color: #d9d6d6;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+/*Styling Delete button for task delete */
+.itemlist li .del {
+    rotate: 90deg;
+    color: red;
+    position: absolute;
+    top: 2px;
+    right: -30px;
+}
+
+/*Delete button visible when you hover on task */
+.itemlist li:hover .del {
+    right: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Misc */
+.taskleft {
+    color: black;
+    padding-right: 3px;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: rgb(105, 105, 105);
+}
+
+/* Hiding browser's default checkbox */
+.box input {
+    display: none;
+}
+
+/* Creating a custom checkbox for list item */
+.checkmark {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #eee;
+    position: absolute;
+    top: 1px;
+    left: 5px;
+}
+
+/* When the checkbox is checked, adding background */
+.box input:checked~.checkmark {
+    background-color: #2ff57b;
+}
+
+/* Create the checkmark(indicator) ,(hidden when not checked) */
+.checkmark:after {
+    position: absolute;
+    display: none;
+    content: ""; 
+}
+
+/* Styling checkmark/indicator */
+.box .checkmark:after {
+    width: 3px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    left: 7px;
+    top: 3px;
+
+}
+
+/* Showing checkmark when checked */
+.box input:checked~.checkmark:after {
+    display: block;
+}
